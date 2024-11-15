@@ -26,7 +26,7 @@ cmd({
 
         const movieInfo = `
 *🎬 WIHANGA-BOT FILM 🎬*
-*ෆිල්ම් බල බල ඉදපන්*
+
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
