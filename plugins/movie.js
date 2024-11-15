@@ -25,7 +25,8 @@ cmd({
         }
 
         const movieInfo = `
-*🎬 SILENT-SOBX-MD 🎬*
+*🎬 WIHANGA-BOT FILM 🎬*
+*ෆිල්ම් බල බල ඉදපන්*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
