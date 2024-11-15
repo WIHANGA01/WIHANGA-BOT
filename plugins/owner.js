@@ -33,7 +33,7 @@ title: 'WIHANGA-BOT',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://wa.me/+94769611502?text=HY_WIHANGA_BROTHER^^" ,
-thumbnailUrl: "https://telegra.ph/file/ffda25ad4092b3328d551.jpg" ,
+thumbnailUrl: "https://github.com/user-attachments/assets/e2bb2b0f-d082-44fe-8c3c-d1126c7193d2" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }
