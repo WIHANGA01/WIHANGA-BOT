@@ -25,32 +25,27 @@ const url = data.url
     
 const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
     
-let message = `‎‎🤍WIHANGA-MD SONG DOWNLOAD🤍
+let message = `‎‎
+╭═══🎶❃ *wihanga-bot song download* ❃🎶═══⊷
+┃❃╭──────────────
+┃❃│🎵 ‎TITLE: ${data.title}
+┃❃│ ⏱ DURATION: ${data.timestamp}
+┃❃│🌏 UPLOADED: ${data.ago}
+┃❃│🧿 VIEWS: ${data.views}
+┃❃│🤵 AUTHOR: ${data.author.name}
+┃❃│📎 URL: ${data.url}
+┃❃╰───────────────
+╰═════════════════⊷
+> © wihanga-bot 2024 👩‍💻
 
-__________________________
-
-> | 🪅title : ${deta.title} 🍃
-
-> 🪅description : ${deta.description} 🍃
-
-> | 🪅time : ${deta.timestamp} 🍃
-
-> | 🪅ago : ${deta.ago} 🍃
-
-> | 🪅views : ${deta.views} 🍃
-
-_________________________
-    ↺ |◁   II   ▷|   ♡
-
-⚖️powerd by > WIHANGA-MD⚖️
-   
+> ↺ |◁   II   ▷|   ♡
 `
   
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
   
 // SEND AUDIO NORMAL TYPE and DOCUMENT TYPE
 await conn.sendMessage(from, { audio: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg" }, { quoted: mek })
-await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `* WIHANGA-BOT`}, { quoted: mek })
+await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `* WIHANGA-BOT 👩‍💻`}, { quoted: mek })
   
 } catch(e){
 console.log(e)
@@ -74,9 +69,9 @@ if(!q) return reply("*Please give me a title*")
 let search = await yts(q)
 let link = search.all[0].url
 let desc = `
-*╭─────────────────────────●●►*
-_*♻️ WIHANGA-BOT VIDEO DWNLOAD*_
-*╰─────────────────────────●●►*
+*╭──────────●●►*
+_*♻️ WIHANGA-BOT VIDEO DOWNLOADER ♻️*_
+*╰──────────●●►*
 
  *♻️ TITLE:* ${search.all[0].title}
 
@@ -89,10 +84,10 @@ _*♻️ WIHANGA-BOT VIDEO DWNLOAD*_
  *♻️ VIEWS:* ${search.all[0].views}
 
  *♻️ URL:* ${search.all[0].url}
-───────────────────────────────────
-> © WIHANGA-BOT
-───────────────────────────────────
->       ↺ |◁   II   ▷|   ♡
+
+> © wihanga anuhas 2024 👩‍💻
+
+> ↺ |◁   II   ▷|   ♡
 `
 
 await conn.sendMessage(from,{image:{url: search.all[0].thumbnail},caption:desc},{quoted:mek})
@@ -103,7 +98,7 @@ await conn.sendMessage(from,{image:{url: search.all[0].thumbnail},caption:desc},
 await conn.sendMessage(from, {
   video: {url: data.result.downloadLink},
 mimetype: "video/mp4",
- fileName: `${data.result.title}.mp4`,caption: `* WIHANGA-BOT`}, { quoted: mek })
+ fileName: `${data.result.title}.mp4`,caption: `* WIHANGA-BOT 👩‍💻`}, { quoted: mek })
 
 }catch(e){
     console.log(e)
