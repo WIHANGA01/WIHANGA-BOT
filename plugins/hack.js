@@ -27,8 +27,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '```[▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▬▬▬▬▬▬▬▬▰▰▰▰▱▱▱▱▱] 90%``` ⏳'    ,
             '```[▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰] 100%``` ✅',
             '𝙇𝙊𝘿𝙄𝙉 𝘾𝙊𝙈𝙋𝙇𝙀𝘼𝙏 ツ',
-            '💥ඔබගේ සියලු දත්ත wihanga-md වෙතට ගැනීම අරාම්බ කරෙමි..💥',
-            'SENDING.....',
+            '💥ඔබගේ සියලු දත්ත wihanga-md වෙතට ගැනීම අරාම්භ කරෙමි..💥',
+            '😈SENDING.....😈',
             '⚠️FB,TIKTOK,WHATS APP DETAILS TRANSFERING....⚠️',
             '⚠️YOUR IMAGE,VIDEO,CONTACT,AUDIO FILE TRANSFERING..⚠️',
             '',
@@ -38,7 +38,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '⚠️ *YOUR MOBILE FULL DATA HACKED....🔗*',
             'ඔබගේ ජංගම දුරකතනයේ සියලු ම දත්ත 𝙬𝙞𝙝𝙖𝙣𝙜𝙖-𝙢𝙙 වෙතට ලබාගෙන ඇත ☠️☠️',
             '',
-            ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻*'
+            ' *👨‍💻 𝙔𝙊𝙐𝙍 𝙃𝘼𝘾𝙆𝙄𝙉 𝙎𝙐𝘾𝙎𝙀𝙎𝙁𝙔𝙇𝙇𝙔 👩‍💻*'
         ];
 
         for (const line of steps) {
