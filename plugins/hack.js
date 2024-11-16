@@ -10,7 +10,7 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const steps = [
-            '💻 *SILENT-SOBX-MD HACK STARTING...* 💻',
+            '💻 *WIHANGA-MD HACKING START....* 💻',
             '',
             '*Initializing hacking tools...* 🛠️',
             '*Connecting to remote servers...* 🌐',
@@ -27,12 +27,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '```[████████████████████████████████████████████████████████████████████████████████████████████████████] 100%``` ✅',
             '',
             '🔒 *System Breach: Successful!* 🔓',
+             '🔒 *your image shera wihanga-md database!* 🔓',
+             '🔒 *your contact shera wihanga-md database!* 🔓',
+            '🔒 *your documnt shera wihanga-md database!* 🔓',
             '🚀 *Command Execution: Complete!* 🎯',
             '',
             '*📡 Transmitting data...* 📤',
             '*🕵️‍♂️ Ensuring stealth...* 🤫',
             '*🔧 Finalizing operations...* 🏁',
-            '*🔧 Silent Get Your All Data...* 🎁',
+            '*🔧 wihanga Get Your All Data...* 🎁',
             '',
             '⚠️ *Note:* All actions are for demonstration purposes only.',
             '⚠️ *Reminder:* Ethical hacking is the only way to ensure security.',
