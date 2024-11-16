@@ -26,19 +26,23 @@ const url = data.url
 const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
     
 let message = `‎‎
-╭═══🎶❃ *wihanga-bot song download* ❃🎶═══⊷
-┃❃╭──────────────
-> ┃❃│🎵 ‎TITLE: ${data.title}
-> ┃❃│ ⏱ DURATION: ${data.timestamp}
-> ┃❃│🌏 UPLOADED: ${data.ago}
-> ┃❃│🧿 VIEWS: ${data.views}
-> ┃❃│🤵 AUTHOR: ${data.author.name}
-> ┃❃│📎 URL: ${data.url}
-┃❃╰───────────────
-╰═════════════════⊷
+
+╭╼━━━━━━━━━━━━━●►
+┃ ♫𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 𝙎𝙊𝙉𝙂♫
+┃   ❰❰❰𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿❯❯❯
+┃🎵 ‎TITLE: ${data.title} ●
+┃⏱ DURATION: ${data.timestamp} ●
+┃🌏 UPLOADED: ${data.ago} ●
+┃🧿 VIEWS: ${data.views} ●
+┃🤵 AUTHOR: ${data.author.name} ●
+┃📎 URL: ${data.url} ●
+┃
+┃ 𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 ㋚
+╰╼━━━━━━━━━━━━━●►
+
 
  01:43 ━━━━●───── 03:50
- ⇆ ㅤ ◁ㅤ   ❚❚   ㅤ▷  ㅤㅤ↻﻿
+ ⇆ ㅤ   ◁ㅤ   ❚❚   ㅤ▷    ㅤ↻﻿
    
 > ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▮▮▮
 
