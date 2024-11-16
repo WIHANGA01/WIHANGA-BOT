@@ -1,3 +1,4 @@
+
 const {cmd , commands} = require('../command');
 
 cmd({
@@ -10,20 +11,11 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const steps = [
-            '💻 *WIHANGA-MD HACKING START....* 💻',
+            '💻 *WIHANGA-MD HACKING START...* 💻',
             '',
             '*Initializing hacking tools...* 🛠️',
             '*Connecting to remote servers...* 🌐',
             '',
-            '`LODING HACKING SYSTEM.....💥`',
-            '',
-            '',
-             '`NOW I'M GET YOUR ALL FILE.....📁`',
-             '',
-             '',
-             '`HAKING STARTING YOUR DEVIS.....⤵️`',
-               '',
-                 '',
             '```[██████████] 10%``` ⏳'                                            ,
             '```[████████████████████] 20%``` ⏳'                                   ,
             '```[██████████████████████████████] 30%``` ⏳'                               ,
@@ -35,29 +27,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '```[██████████████████████████████████████████████████████████████████████████████████████████] 90%``` ⏳'    ,
             '```[████████████████████████████████████████████████████████████████████████████████████████████████████] 100%``` ✅',
             '',
-            '⚠️ *System Breach: Successful!* ⚠️',
-             '💥 *your image shera wihanga-md database!* 💥',
-             '💥 *your contact shera wihanga-md database!* 💥',
-            '💥 *your documnt shera wihanga-md database!* 💥',
-            '💥 *your facebook details shera wihanga-md database!* 💥',
-            '💥 *your tiktok details shera wihanga-md database!* 💥',
-            '💥 *your whatsapp details shera wihanga-md database!* 💥',
-            '🚀 *Everything on your mobile phone is brought to wihanga-md...*',
+            '🔒 *System Breach: Successful!* 🔓',
+            '🚀 *Command Execution: Complete!* 🎯',
             '',
-             '',
             '*📡 Transmitting data...* 📤',
             '*🕵️‍♂️ Ensuring stealth...* 🤫',
             '*🔧 Finalizing operations...* 🏁',
-            '*🔧 wihanga Get Your All Data...* 🎁',
+            '*🔧 wihanga-md Get Your All Data...* 🎁',
             '',
-             '💥ඔබගේ ජංගම දුරකත්නයේ සියලුම දෑ wihanga-md වෙත්ට රැගෙන ඇත...💥',
-              '',
             '⚠️ *Note:* All actions are for demonstration purposes only.',
             '⚠️ *Reminder:* Ethical hacking is the only way to ensure security.',
             '⚠️ *Reminder:* Strong hacking is the only way to ensure security.',
             '',
-            '',
-            
             ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻☣*'
         ];
 
