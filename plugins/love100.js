@@ -1,7 +1,7 @@
 const {cmd , commands} = require('../command');
 
 cmd({
-    pattern: "love100",
+    pattern: "love",
     desc: "SEND 100 TYMES LOVE",
     category: "fun",
     react: "👨‍💻",
@@ -109,7 +109,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 '*I LOVE YOU....🌹💝*',
 '*I LOVE YOU....🌹💝*',
 '*I LOVE YOU....🌹💝*',
-             '*I LOVE YOU....🌹💝*'
+'*I LOVE YOU....🌹💝*'
         ];
 
         for (const line of steps) {
