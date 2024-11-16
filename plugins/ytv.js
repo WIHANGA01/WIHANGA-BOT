@@ -28,17 +28,21 @@ const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
 let message = `‎‎
 ╭═══🎶❃ *wihanga-bot song download* ❃🎶═══⊷
 ┃❃╭──────────────
-┃❃│🎵 ‎TITLE: ${data.title}
-┃❃│ ⏱ DURATION: ${data.timestamp}
-┃❃│🌏 UPLOADED: ${data.ago}
-┃❃│🧿 VIEWS: ${data.views}
-┃❃│🤵 AUTHOR: ${data.author.name}
-┃❃│📎 URL: ${data.url}
+> ┃❃│🎵 ‎TITLE: ${data.title}
+> ┃❃│ ⏱ DURATION: ${data.timestamp}
+> ┃❃│🌏 UPLOADED: ${data.ago}
+> ┃❃│🧿 VIEWS: ${data.views}
+> ┃❃│🤵 AUTHOR: ${data.author.name}
+> ┃❃│📎 URL: ${data.url}
 ┃❃╰───────────────
 ╰═════════════════⊷
-> © wihanga-bot 2024 👩‍💻
 
-> ↺ |◁   II   ▷|   ♡
+01:43 ━━━━●───── 03:50
+⇆ㅤ ㅤ◁ㅤ ❚❚ ㅤ▷ ㅤㅤ↻﻿
+  ılıılıılıılıılıılı
+> ᴠᴏʟᴜᴍᴇ : -▮▮▮▮▮▮▮▮▮▮+ 
+
+> © wihanga-bot 2024 👩‍💻
 `
   
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
