@@ -11,8 +11,8 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const steps = [
+             '',
             '💻 *WIHANGA-MD HACKING START...* 💻',
-            '',
             '*Initializing hacking tools...* 🛠️',
             '*Connecting to remote servers...* 🌐',
             '',
@@ -27,19 +27,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '```[██████████████████████████████████████████████████████████████████████████████████████████] 90%``` ⏳'    ,
             '```[████████████████████████████████████████████████████████████████████████████████████████████████████] 100%``` ✅',
             '',
-            '🔒 *System Breach: Successful!* 🔓',
-            '🚀 *Command Execution: Complete!* 🎯',
+            '💥ඔබගේ සියලු දත්ත wihanga-md වෙතට ගැනීම අරාම්බ කරෙමි..💥',
+            'SENDING.....',
+            '⚠️FB,TIKTOK,WHATS APP DETAILS TRANSFERING....⚠️',
+            '⚠️YOUR IMAGE,VIDEO,CONTACT,AUDIO FILE TRANSFERING..⚠️',
             '',
-            '*📡 Transmitting data...* 📤',
-            '*🕵️‍♂️ Ensuring stealth...* 🤫',
             '*🔧 Finalizing operations...* 🏁',
-            '*🔧 wihanga-md Get Your All Data...* 🎁',
+            '*💀 wihanga-md Get Your All Data...* 💀',
+            'සියලුම දත්ත WIHANGA-MD වෙත ලබා ගෙන ඇත....💀💀',
+            '⚠️ *YOUR MOBILE FULL DATA HACKED....🔗*',
+            '⚠️ *🚀',
             '',
-            '⚠️ *Note:* All actions are for demonstration purposes only.',
-            '⚠️ *Reminder:* Ethical hacking is the only way to ensure security.',
-            '⚠️ *Reminder:* Strong hacking is the only way to ensure security.',
-            '',
-            ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻☣*'
+            ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻*'
         ];
 
         for (const line of steps) {
