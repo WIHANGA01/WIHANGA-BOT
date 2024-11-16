@@ -21,4 +21,5 @@ FAKE_RECORDING: process.env.FAKE_RECORDING || "true",
 AUTO_REACT: process.env.AUTO_REACT || "true",
 OWNER_REACT: process.env.OWNER_REACT || "true",
 BOT_NAME: process.env.BOT_NAME || "WIHANGA-MD",
+AUTO_VOICE : "true",
 };
