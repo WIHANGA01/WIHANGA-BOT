@@ -10,8 +10,33 @@ let baseUrl;
 })();
 
 
-const yourName = "ᵂᴵᴴᴬᴺᴳᴬ🥳🔮";
+const yourName = "> ᴘᴏᴡᴇʀᴅ ʙʏ ᴡɪʜᴀɴɢᴀ-ᴍᴅ";
 
+
+
+//fb downloader
+cmd({
+    pattern: "fb",
+    alias: ["facebook"],
+    desc: "download fb videos",
+    category: "download",
+    react: "📥",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        if (!q && !q.startsWith("https://")) return reply("give me fb url ❗")
+        //fetch data from api  
+        let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
+        reply("*ඩව්න්ලෝඩ් වෙන ගමන් සුට්ටක් ඉන්න ළමයෝ....🐱*")
+        //send video (hd,sd)
+        await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: `- HD\n\n\nවැඩි කොලිටියෙන් 🐱 ${yourName}` }, { quoted: mek })
+        await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: `- SD \n\n\nඅඩු කොලිටියෙන් 🐱 ${yourName}` }, { quoted: mek })  
+    } catch (e) {
+        console.log(e)
+        reply(`${e}`)
+    }
+})
 
 //tiktok downloader
 cmd({
@@ -27,10 +52,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("give me tiktok url ❗")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/tiktokdl?url=${q}`)
-        reply("*ඩව්න්ලෝඩ් වෙන ගමන් සුට්ටක් ඉන්න ළමයෝ....😻💓*")
+        reply("*ඩව්න්ලෝඩ් වෙන ගමන් සුට්ටක් ඉන්න ළමයෝ....🐱*")
         //send video (wm,nwm)
-        await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: `🧸𝗪𝗜𝗛𝗔𝗡𝗚𝗔-𝗠𝗗🧸\n\n💫𝚃𝙸𝙺 𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁💫 ${yourName}` }, { quoted: mek })
-        
+        await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: `- NO-WATERMARK\n\n\nවෝටර් රහිතව 🐱 ${yourName}` }, { quoted: mek })
+        await conn.sendMessage(from, { video: { url: data.data.wm }, mimetype: "video/mp4", caption: `- WITH-WATERMARK \n\n\n\nවෝටර් මාර්ක්ක් සහිතව 🐱 ${yourName}` }, { quoted: mek })  
         //send audio    
         await conn.sendMessage(from, { audio: { url: data.data.audio }, mimetype: "audio/mpeg" }, { quoted: mek })  
     } catch (e) {
