@@ -1,159 +1,166 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
-const os = require("os")
-const {runtime} = require('../lib/functions')
-const axios = require('axios')
-
 cmd({
 
-    pattern: "menu",
+    pattern: "menu3",
 
     react: "🛸",
 
-    alias: ["panel","commands"],
+    alias: ["panel","list","commands"],
 
     desc: "Get bot\'s command list.",
 
     category: "main",
 
-    use: '.menu',
+    use: '.menu3',
 
     filename: __filename
 
 },
 
+
 async(conn, mek, m,{from, l, quoted, body, isCmd, umarmd, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 
 try{
-let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
+let madeMenu = `❁ ════ ❃•◯•❃ ════ ❁
 
 *⇆ ʜɪɪ ᴍʏ ᴅᴇᴀʀ ғʀɪᴇɴᴅ ⇆*
 
      *${pushname}*
      
-╰━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
+❁ ════ ❃•◯•❃ ════ ❁
+
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━
-      *WELCOME TO WIHANGA-MD COMMAND LIST*
+      *WIHANGA CMD LIST*
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-*WIHANGA-MD MENU LIST*
-
-*┌─〈 ${config.BOT_NAME} 〉─◆*
-*│╭─────────────···▸*
-*┴│▸*
-*❖│▸* *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
-*❖│▸* *ʀᴀᴍ ᴜsᴇ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-*❖│▸* *ɴᴀᴍᴇ ʙᴏᴛ* : *❖WIHANGA-MD❖*
-*❖│▸* *ᴄʀᴇᴀᴛᴏʀ* : *WIHANGA*
-*❖│▸* *ᴠᴇʀsɪᴏɴs* : *ᴠ.1.0.0*
-*❖│▸* *ᴍᴇɴᴜ ᴄᴍᴅ* : *ᴍᴇɴᴜ ʟɪsᴛ*
-*┬│▸*
-*│╰────────────···▸▸*
-*└──────────────···▸*
-*♡︎•━━━━━━☻︎━━━━━━•♡︎*
-
-*╭────❒⁠⁠⁠⁠* *📥 DOWNLOADER-CMD 📥* *❒⁠⁠⁠⁠* 
-*┋* *.ғʙ <ᴜʀʟ>*
-*┋* *.ɪɴꜱᴛᴀ <ᴜʀʟ>*
-*┋* *.ᴠɪᴅᴇᴏ <ᴜʀʟ>*
-*┋* *.ɢᴅʀɪᴠᴇ <ᴜʀʟ>*
-*┋* *.ᴛᴡɪᴛᴛᴇʀ <ᴜʀʟ>*
-*┋* *.ᴛᴛ<ᴜʀʟ>*
-*┋* *.ᴍᴇᴅɪᴀғɪʀᴇ <ᴜʀʟ>*
-*┋* *.ꜱᴏɴɢ <ϙᴜᴇʀʏ>*
-*┋* *.ᴘʟᴀʏ <ᴜʀʟ>*
-*┋* *.ᴠɪᴅᴇᴏ <ϙᴜᴇʀʏ>*
-*┋* *.ᴠɪᴅᴇᴏ <ᴜʀʟ>*
-*┋* *.ɪᴍɢ <ϙᴜᴇʀʏ>*
-*┋* *.ᴀᴘᴋ <ɴᴀᴍᴇ>*
-*┋* *.xᴠɪᴅᴇᴏ <ᴛɪᴛᴛʟᴇ>*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *🔎 SEARCH-CMD 🔍* *❒⁠⁠⁠⁠* 
-*┋* *.ʏᴛꜱ  <ᴛᴇxᴛ>*
-*┋* *.ʟᴏʟɪ <ᴛᴇxᴛ>*
-*┋* *.ᴍᴏᴠɪᴇ <ᴛᴇxᴛ>*
-*┋* *.ɪᴍɢ <ᴛᴇxᴛ>*
-*┋* *.ᴡᴇᴀᴛʜᴇʀ <ᴄɪᴛʏ>
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *🧠 AI-CMD 🧠* *❒⁠⁠⁠⁠* 
-*┋* *.ɢᴘᴛ <ᴛᴇxᴛ>*
-*┋* *.ᴀɪ <ᴛᴇxᴛ>*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *👨‍💻 OWNER-CMD 👨‍💻* *❒⁠⁠⁠⁠* 
-*┋* *.ᴜᴘᴅᴀᴛᴇᴄᴍᴅ*
-*┋* *.ᴏᴡɴᴇʀ*
-*┋* *.ʀᴇᴘᴏ*
-*┋* *.ꜱʏꜱᴛᴇᴍ*
-*┋* *.ꜱᴛᴀᴛᴜꜱ*
-*┋* *.ʙʟᴏᴄᴋ*
-*┋* *.ᴜɴʙʟᴏᴄᴋ*
-*┋* *.sʜᴜᴛᴅᴏᴡɴ*
-*┋* *.ᴄʟᴇᴀʀᴄʜᴀᴛs*
-*┋* *.sᴇᴛᴘᴘ*
-*┋* *.ʙʀᴏᴀᴅᴄᴀsᴛ*
-*┋* *.ᴊɪᴅ*
-*┋* *.ɢᴊɪᴅ*
-*┋* *.ʀᴇꜱᴛᴀʀᴛ*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *📃 INFO-CMD 📃* *❒⁠⁠⁠⁠* 
-*┋* *.ᴍᴇɴᴜ*
-*┋* *.sᴄʀɪᴘᴛ*
-*┋* *.ʀᴇᴘᴏ*
-*┋* *.ᴀʟɪᴠᴇ*
-*┋* *.ʙᴏᴛɪɴꜰᴏ*
-*┋* *.ꜱᴛᴀᴛᴜꜱ*
-*┋* *.ꜱᴜᴘᴘᴏʀᴛ*
-*┋* *.ᴘɪɴɢ*
-*┋* *.ᴘɪɴɢ2*
-*┋* *.ꜱʏꜱᴛᴇᴍ*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *🎡 CONVERTER-CMD 🎡* *❒⁠⁠⁠⁠* 
-*┋* *.sᴛɪᴄᴋᴇʀ*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *⛱️ RANDOM-CMD ⛱️* *❒⁠⁠⁠⁠* 
-*┋* *.ᴋɪɴɢ*
-*┋* *.ᴅᴏɢ*
-*┋* *.ᴀɴɪᴍᴇ*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ1*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ2*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ3*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ4*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ5*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *🏜️ WALLPAPERS-CMD 🏜️* *❒⁠⁠⁠⁠* 
-*┋* *.ɪᴍɢ*
-*┕───────────────────❒*
-
-*╭────❒⁠⁠⁠⁠* *🌐 OTHER-CMD 🌐* *❒⁠⁠⁠⁠* 
-*┋* *.ᴛʀᴛ*
-*┋* *.ᴊᴏᴋᴇ*
-*┋* *.ᴍᴏᴠɪᴇ*
-*┋* *.ꜰᴀᴄᴛ*
-*┋* *.ɢɪᴛʜᴜʙꜱᴛᴀʟᴋ*
-*┋* *.ɢᴘᴀꜱꜱ*
-*┋* *.ʜᴀᴄᴋ*
-*┋* *.ǫᴜᴏᴛᴇ*
-*┋* *.ꜱʀᴇᴘᴏ*
-*┋* *.ᴅᴇꜰɪɴᴇ*
-*┕───────────────────❒*
-
-*❒⁠⁠⁠⁠▭▬▭▬▭▬▭▬▭▬▭▬▭❒*⁠⁠⁠⁠
-
-┏━━━━━━━━━━━━━━━━━━━
-*https://whatcWkZN970s*
-┗━━━━━━━━━━━━━━━━━━━
 
 
-> *WIHANGA ANUHAS 👦🫂*
-╘✦•·········•••••••••············•✦ 
+*╭──❮ DOWNLOAD COMMANDS ❯*
+│
+│📖 COMMAND: .play
+│ℹ️ Download Audio from yt
+│ 
+│📖 COMMAND: .song
+│ℹ️ Download song from yt
+│ 
+│📖 COMMAND: .apk
+│ℹ️ Download apk from playstore
+│ 
+│📖 COMMAND: .video
+│ℹ️ Download video from yt
+│ 
+│📖 COMMAND: .fb
+│ℹ️ Download  video from fb
+│ 
+│📖 COMMAND: .tk
+│ℹ️ Download video from tiktok
+│ 
+│📖 COMMAND: .ig
+│ℹ️ Download video from ig
+│ 
+│📖 COMMAND: .gdrive
+│ℹ️ Download drive files
+│ 
+│📖 COMMAND: .wamod
+│ℹ️ Download wamod apk
+│
+│📖 COMMAND: .img
+│ℹ️ Download image
+│
+│📖 COMMAND: .xvideo
+│ℹ️ Download xxx video
+╰────────────⦁ 
+
+*╭──❮ SEARCH COMMANDS ❯*
+│
+│📖 COMMAND: .yts
+│ℹ️ Serch videos from yt
+╰────────────⦁  
+
+*╭──❮‍ MAIN COMMANDS ❯*
+│
+│📖 COMMAND: .alive
+│ℹ️ Check online or not
+│  
+│📖 COMMAND: .ping
+│ℹ️ Check bot speed
+│  
+│📖 COMMAND: .menu
+│ℹ️ Nero main menu
+│
+│📖 COMMAND: .menu2
+│ℹ️ Nero main menu2
+│ 
+│📖 COMMAND: .ai
+│ℹ️ chat with ai bot
+│
+│📖 COMMAND: .system
+│ℹ️ check bot systems
+│
+│📖 COMMAND: .owner
+│ℹ️ get owner info
+│ 
+│📖 COMMAND: .status
+│ℹ️ check bot runtime
+╰────────────⦁
+
+*╭──❮ OTHER COMMANDS ❯*
+│
+│📖 COMMAND: .hirunews/news
+│ℹ️ Get news result for life
+│ 
+│📖 COMMAND: .wabeta
+│ℹ️ Get whatsapp beta news
+│
+│📖 COMMAND: .sitech
+│ℹ️ Get tech news
+│ 
+│📖 COMMAND: .nasa
+│ℹ️ Get nasa news
+╰────────────⦁
+
+*╭──❮ GROUP COMMANDS ❯*
+│
+│📖 COMMAND: .mute
+│ℹ️ Mute group
+│
+│📖 COMMAND: .unmute
+│ℹ️ Unmute group
+│
+│📖 COMMAND: .left
+│ℹ️ left group
+│
+│📖 COMMAND: .jid
+│ℹ️ group jid
+╰────────────⦁
+
+*╭──❮ OWNER COMMANDS ❯*
+│
+│📖 COMMAND: .update
+│ℹ️ update bot velue 
+│
+│📖 COMMAND: .restart 
+│ℹ️ restart your bot
+╰────────────⦁
+
+*╭──❮ CONVERT COMMANDS ❯*
+│
+│📖 COMMAND: .sticker
+│ℹ️ convert photo to sticker
+╰────────────⦁
+
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+> *https://github.com/wihanga01
+
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+> WIHANGA-MD MENU LIST
+
+╰━❁ ═══ ❃•⇆•❃ ═══ ❁━╯
 `
 
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
@@ -163,3 +170,4 @@ console.log(e)
 reply(`${e}`)
 }
 })
+SILENT-SOBX-MD/plugins/menu3.js at main · WIHANGA01/SILENT-SOBX-MD 
