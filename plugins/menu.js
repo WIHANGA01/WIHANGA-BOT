@@ -2,7 +2,7 @@ const config = require('../config')
 const {cmd , commands} = require('../command')
 cmd({
 
-    pattern: "menu3",
+    pattern: "menu",
 
     react: "🛸",
 
@@ -12,7 +12,7 @@ cmd({
 
     category: "main",
 
-    use: '.menu3',
+    use: '.menu',
 
     filename: __filename
 
@@ -170,4 +170,4 @@ console.log(e)
 reply(`${e}`)
 }
 })
-SILENT-SOBX-MD/plugins/menu3.js at main · WIHANGA01/SILENT-SOBX-MD 
+
