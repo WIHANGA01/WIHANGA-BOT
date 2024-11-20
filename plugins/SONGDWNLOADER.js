@@ -28,8 +28,8 @@ const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
 let message = `‎‎
 
 ╭╼━━━━━━━━━━━━━●►
-┃ ♫𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 𝙎𝙊𝙉𝙂♫
-┃   ❰❰❰𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿❯❯❯
+┃ 𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 𝙎𝙊𝙉𝙂
+┃   𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿
 ┃🎵 ‎TITLE: ${data.title} ●
 ┃⏱ DURATION: ${data.timestamp} ●
 ┃🌏 UPLOADED: ${data.ago} ●
@@ -40,10 +40,9 @@ let message = `‎‎
 ┃ 𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 ㋚
 ╰╼━━━━━━━━━━━━━●►
 
+01:43 ━━━●──── 03:50
+⇆ ㅤ◁ㅤ  ❚❚  ㅤ▷   ↻﻿
 
- 01:43 ━━━●──── 03:50
- ⇆ ㅤ   ◁ㅤ   ❚❚   ㅤ▷    ㅤ↻﻿
-   
 > ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▮▮▮
 
 
