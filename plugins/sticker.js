@@ -30,8 +30,8 @@ cmd({
             await require('fs').promises.writeFile(nameJpg, imageBuffer);
 
             let sticker = new Sticker(nameJpg, {
-                pack: pushname, // The pack name
-                author: '', // The author name
+                pack: wihanga-md, // The pack name
+                author: 'wihanga-md', // The author name
                 type: q.includes('--crop') || q.includes('-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
                 categories: ['🤩', '🎉'], // The sticker category
                 id: '12345', // The sticker id
@@ -47,8 +47,8 @@ cmd({
             await require('fs').promises.writeFile(nameWebp, stickerBuffer);
 
             let sticker = new Sticker(nameWebp, {
-                pack: pushname, // The pack name
-                author: '', // The author name
+                pack: wihanga-md, // The pack name
+                author: 'wihanga-md', // The author name
                 type: q.includes('--crop') || q.includes('-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
                 categories: ['🤩', '🎉'], // The sticker category
                 id: '12345', // The sticker id
