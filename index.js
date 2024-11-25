@@ -174,7 +174,7 @@ if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { 
 //================ownerreact
 if(senderNumber.includes("94769611502")){
 if(isReact) return
-m.react("👑")
+m.react("🐣")
 }
 
 if(senderNumber.includes("923154647639")){
@@ -190,11 +190,11 @@ m.react("🦋")
 //AutoReact 
 if (!isReact && senderNumber !== botNumber) {
 if (config.AUTO_REACT === 'true')
-    m.react("💖");
+    m.react("🫶🏻");
 }
 if (!isReact && senderNumber === botNumber) {
 if (config.OWNER_REACT === 'true')
-    m.react("👑");
+    m.react("💞");
 }                
 //============================        
         
