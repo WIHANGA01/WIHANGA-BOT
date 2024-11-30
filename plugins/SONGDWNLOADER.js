@@ -26,34 +26,26 @@ const url = data.url
 const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
     
 let message = `‎‎
+╭═══🎶❃ *WIHANGA-MD SONG DOWNLOAD* ❃🎶═══⊷
+┃❃╭──────────────
+┃❃│🎵 ‎TITLE: ${data.title}
+┃❃│ ⏱ DURATION: ${data.timestamp}
+┃❃│🌏 UPLOADED: ${data.ago}
+┃❃│🧿 VIEWS: ${data.views}
+┃❃│🤵 AUTHOR: ${data.author.name}
+┃❃│📎 URL: ${data.url}
+┃❃╰───────────────
+╰═════════════════⊷
+> WIHANGA ⚡
 
-╭╼━━━━━━━━━━━━━●►
-┃ 𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 𝙎𝙊𝙉𝙂
-┃   𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿
-┃🎵 ‎TITLE: ${data.title} ●
-┃⏱ DURATION: ${data.timestamp} ●
-┃🌏 UPLOADED: ${data.ago} ●
-┃🧿 VIEWS: ${data.views} ●
-┃🤵 AUTHOR: ${data.author.name} ●
-┃📎 URL: ${data.url} ●
-┃
-┃ 𝙒𝙄𝙃𝘼𝙉𝙂𝘼-𝙈𝘿 ㋚
-╰╼━━━━━━━━━━━━━●►
-
-01:43 ━━━●──── 03:50
-⇆ ㅤ◁ㅤ  ❚❚  ㅤ▷   ↻﻿
-
-> ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▮▮▮
-
-
-> © wihanga-bot 2024 👩‍💻
+> ↺ |◁   II   ▷|   ♡
 `
   
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
   
 // SEND AUDIO NORMAL TYPE and DOCUMENT TYPE
 await conn.sendMessage(from, { audio: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg" }, { quoted: mek })
-await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `* WIHANGA-BOT 👩‍💻`}, { quoted: mek })
+await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `*WIHANGA-MD* 👩‍💻`}, { quoted: mek })
   
 } catch(e){
 console.log(e)
@@ -78,7 +70,7 @@ let search = await yts(q)
 let link = search.all[0].url
 let desc = `
 *╭──────────●●►*
-_*♻️ WIHANGA-BOT VIDEO DOWNLOADER ♻️*_
+_*♻️ WIHANGA-MDVIDEO DOWNLOADER ♻️*_
 *╰──────────●●►*
 
  *♻️ TITLE:* ${search.all[0].title}
@@ -93,7 +85,7 @@ _*♻️ WIHANGA-BOT VIDEO DOWNLOADER ♻️*_
 
  *♻️ URL:* ${search.all[0].url}
 
-> © wihanga anuhas 2024 👩‍💻
+> © WIHANGA ⚡
 
 > ↺ |◁   II   ▷|   ♡
 `
@@ -106,7 +98,7 @@ await conn.sendMessage(from,{image:{url: search.all[0].thumbnail},caption:desc},
 await conn.sendMessage(from, {
   video: {url: data.result.downloadLink},
 mimetype: "video/mp4",
- fileName: `${data.result.title}.mp4`,caption: `* WIHANGA-BOT 👩‍💻`}, { quoted: mek })
+ fileName: `${data.result.title}.mp4`,caption: `*WIHANGA-MD* 👩‍💻`}, { quoted: mek })
 
 }catch(e){
     console.log(e)
