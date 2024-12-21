@@ -2,9 +2,10 @@
 
 const { cmd } = require('../command')
 const yts = require('yt-search')
+const fg = require('api-dylux')
 const { fetchJson } = require('../lib/functions')
 
-const apilink = 'https://dark-yasiya-api-new.vercel.app' // API LINK ( DO NOT CHANGE THIS!! )
+
 
 cmd({
     pattern: "song",
@@ -19,8 +20,8 @@ try{
 
 if(!q) return reply('Give me song name or url !')
     
-const search = await fetchJson(`${apilink}/search/yt?q=${q}`)
-const data = search.result.data[0];
+const search = await yts(q)
+const data = search.videos[0];
 const url = data.url
     
 const ytdl = await fetchJson(`${apilink}/download/ytmp3?url=${data.url}`)
@@ -42,7 +43,10 @@ let message = `‎‎
 `
   
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
-  
+  //download
+
+    let down = await fg.yta(url)
+    let downloadUrl = down.dl_url 
 // SEND AUDIO NORMAL TYPE and DOCUMENT TYPE
 await conn.sendMessage(from, { audio: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg" }, { quoted: mek })
 await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `*WIHANGA-MD* 👩‍💻`}, { quoted: mek })
